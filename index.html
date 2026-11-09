@@ -282,13 +282,8 @@
                         <div class="field"><label for="cognome">Cognome <b>*</b></label><input id="cognome"
                                 name="cognome" type="text" required autocomplete="family-name"></div>
                     </div>
-                    <div class="field"><label for="azienda">Azienda <b>*</b></label><input id="azienda" name="azienda"
-                            type="text" required autocomplete="organization"></div>
-                    <div class="row2">
-                        <div class="field"><label for="email">Email <b>*</b></label><input id="email" name="email"
-                                type="email" required autocomplete="email" placeholder="nome@azienda.it"></div>
-                        <div class="field"><label for="telefono">Telefono</label><input id="telefono" name="telefono"
-                                type="tel" autocomplete="tel"></div>
+                    <div class="field"><label for="email">Email di lavoro <b>*</b></label><input id="email"
+                            name="email" type="email" required autocomplete="email" placeholder="nome@azienda.it">
                     </div>
                     <div class="field">
                         <label for="messaggio">Messaggio</label>
@@ -343,7 +338,6 @@
     <script>
         (function () {
             var root = document.documentElement;
-            document.getElementById("yr").textContent = new Date().getFullYear();
             document.getElementById("theme-btn").addEventListener("click", function () {
                 var cur = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
                 var next = cur === "light" ? "dark" : "light";
@@ -379,9 +373,9 @@
                 e.preventDefault();
                 if (submit.disabled) return;
                 err.hidden = true;
-                var valido = form.nome.value.trim() && form.cognome.value.trim() && form.azienda.value.trim()
+                var valido = form.nome.value.trim() && form.cognome.value.trim()
                     && form.email.value.trim() && form.email.checkValidity();
-                if (!valido) return fail("Compila nome, cognome, azienda e un indirizzo email valido.");
+                if (!valido) return fail("Compila nome, cognome e un indirizzo email di lavoro valido.");
                 if (!form.privacy.checked) return fail("Serve il consenso per poterti ricontattare.");
                 if (!SCRIPT_URL) return fail(INVIO_KO);
                 submit.disabled = true;
@@ -390,9 +384,7 @@
                     tipo: "demo",
                     nome: form.nome.value.trim(),
                     cognome: form.cognome.value.trim(),
-                    azienda: form.azienda.value.trim(),
                     email: form.email.value.trim(),
-                    telefono: form.telefono.value.trim(),
                     messaggio: form.messaggio.value.trim(),
                     privacy: "si"
                 };
