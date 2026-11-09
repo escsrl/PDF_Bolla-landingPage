@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description"
+        content="PDF_Bolla ricompone lotti e sigle ISO sui DDT in PDF secondo la regola di ogni articolo. Lavora sul tuo computer e non modifica mai l'originale.">
+    <meta name="theme-color" content="#0E0F11" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f3f3f3" media="(prefers-color-scheme: light)">
+    <title>PDF_Bolla — ESC</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Open+Sans:wght@400;600&family=Spectral:ital,wght@1,400;1,500&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        try { var t = localStorage.getItem("esc-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) { }
+    </script>
+</head>
+
+<body>
+    <header class="top">
+        <div class="wrap nav">
+            <a class="brand" href="#top" aria-label="PDF_Bolla, torna su">
+                <svg viewBox="9.6 23.2 962.9 976" aria-hidden="true" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M731.6,586.1h1.6c22.6,0,38.8-12.7,46.4-24.5l2.1-3.2l28.6,21.8L808,583c-19,22.3-45.6,34.9-74.7,35.4h-1.8c-62.5,0-106.2-44.1-106.2-107.2c0-63.1,43.7-107.2,106.2-107.2h1.8c29.1,0.5,55.7,13,74.7,35.4l2.4,2.8L781.7,464l-2.1-3.1c-7.7-11.9-23.9-24.6-46.4-24.6h-1.7c-41.3,0-69,30.1-69,74.9C662.6,556,690.3,586.1,731.6,586.1 M498.5,618.4c-34.7,0-61.1-13.4-78.8-39.9l-1.9-2.8l29.8-20.4l1.9,3c8.2,12.7,23.3,27.9,48.9,27.9c21.3,0,42.9-9.1,42.9-29.4c0-16.4-12.8-22.8-34.8-28.2l-26.9-6.3c-44.1-11-53.3-36.1-53.3-55.2c0-43.5,38.4-62.9,76.4-62.9c32.6,0,57.1,13.3,68.9,37.3l1.4,2.8l-30.6,20.2l-1.8-3.4c-8.6-16.4-21.9-24.7-39.5-24.7c-13.9,0-37.4,5.5-37.4,26c0,14.8,8.8,21.5,36.1,27.8l28.3,6.8c30.8,7.1,50.7,29.6,50.7,57.3C578.7,601.6,535.5,618.4,498.5,618.4 M373.9,522.3h-164c4.9,37.2,33.1,63.8,68.6,63.8c29.7,0,50.6-16.8,60.3-32.5l2.1-3.4l27.2,22.4l-2.1,2.7c-22.4,28.6-51.9,43.1-87.5,43.1c-60.1,0-105.5-46.1-105.5-107.2c0-61.1,44.3-107.2,103-107.2c57.7,0.4,97.9,42.4,97.9,102.1V522.3z M165.7,33.2L19.6,192.5v664h132.8v132.7h663.9l146.2-159.3V33.2H165.7z" />
+                    <path d="M276,436.3c-32.5,0-63.2,26.9-65.5,56.2h126C335,457.7,312.2,436.3,276,436.3"
+                        fill="var(--bg)" />
+                </svg>
+                <span class="brand-name">PDF_Bolla</span>
+                <span class="brand-by">by ESC</span>
+            </a>
+            <nav class="nav-links" aria-label="Sezioni">
+                <a href="#come">Come funziona</a>
+                <a href="#regole">Regole</a>
+                <a href="#dati">I tuoi dati</a>
+                <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambia tema">◐</button>
+                <a href="#demo" class="btn btn-primary">Richiedi demo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="eyebrow">Per i DDT di Sistema Golden</div>
+                    <h1>Lotti e sigle ISO a posto sul DDT. <em>Senza riscrivere a mano.</em></h1>
+                    <p class="lead">PDF_Bolla legge il PDF del documento di trasporto, ricompone lotto e
+                        sigla ISO con la regola di ogni articolo e crea un nuovo PDF.
+                        <strong>L'originale non viene mai modificato.</strong>
+                    </p>
+                    <div class="actions">
+                        <a href="#demo" class="btn btn-primary">Richiedi una demo</a>
+                        <a href="#come" class="btn btn-ghost">Come funziona</a>
+                    </div>
+                    <div class="meta">
+                        <span><b>Windows 10 e 11</b></span><span><b>Elaborazione locale</b></span><span><b>Anteprima
+                                prima di generare</b></span>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-bar">
+                        <span class="panel-name">DDT_20481.pdf</span>
+                        <div class="switch" role="group" aria-label="Mostra il documento">
+                            <button type="button" data-show="in" aria-pressed="false">Originale</button>
+                            <button type="button" data-show="out" aria-pressed="true">Trasformato</button>
+                        </div>
+                    </div>
+                    <div class="sheet" id="sheet" data-state="out">
+                        <div class="sheet-title">Docum. di trasporto N. 20481 del 14/10/26</div>
+                        <div class="sheet-head"><span>Cod.</span><span>Descrizione / Iso Colli Netto</span></div>
+                        <div class="art">
+                            <span class="art-cod">20115</span>
+                            <div>
+                                <div class="art-line">ARTICOLO ALFA CAL 8</div>
+                                <div class="art-line"><span><span class="cell changed"><span class="v-in">PE</span><span
+                                                class="v-out">NUE</span></span> 38 342,0 KG</span></div>
+                                <div class="art-line"><span>Lotto: <span class="cell lotto changed"><span
+                                                class="v-in">.A260051734</span><span
+                                                class="v-out">51734</span></span></span><span class="why">regola
+                                        L</span></div>
+                            </div>
+                        </div>
+                        <div class="art">
+                            <span class="art-cod">20342</span>
+                            <div>
+                                <div class="art-line">ARTICOLO BETA 5kg</div>
+                                <div class="art-line"><span><span class="cell changed"><span class="v-in">CN</span><span
+                                                class="v-out">NUE</span></span> 24 120,0 KG</span></div>
+                                <div class="art-line"><span>Lotto: <span class="cell lotto changed"><span
+                                                class="v-in">.A000000000</span><span
+                                                class="v-out">261014</span></span></span><span class="why">regola
+                                        D</span></div>
+                            </div>
+                        </div>
+                        <div class="art">
+                            <span class="art-cod">20508</span>
+                            <div>
+                                <div class="art-line">ARTICOLO GAMMA 10kg</div>
+                                <div class="art-line"><span><span class="cell changed"><span class="v-in">ES</span><span
+                                                class="v-out">UE</span></span> 42 210,0 KG</span></div>
+                                <div class="art-line"><span>Lotto: <span class="cell lotto changed"><span
+                                                class="v-in">.A260052190</span><span
+                                                class="v-out">14/10/2026</span></span></span><span class="why">regola
+                                        T</span></div>
+                            </div>
+                        </div>
+                        <div class="art">
+                            <span class="art-cod">20977</span>
+                            <div>
+                                <div class="art-line">ARTICOLO DELTA 4,5kg</div>
+                                <div class="art-line"><span><span class="cell"><span class="v-in">MX</span><span
+                                                class="v-out">MX</span></span> 16 72,0 KG</span></div>
+                                <div class="art-line"><span>Lotto: <span class="cell lotto"><span
+                                                class="v-in">.A260052611</span><span
+                                                class="v-out">.A260052611</span></span></span><span
+                                        class="why flag">senza regola</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-foot"><span>3 articoli trasformati, 1 segnalato</span><span>Documento di
+                            esempio</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec grey" id="problema">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Perché serve</div>
+                    <h2>Sistemare i DDT a mano ha un costo, in tre forme.</h2>
+                </div>
+                <div class="forms">
+                    <div class="form-cell"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m2 9 3-3 3 3" />
+                            <path d="M13 18H7a2 2 0 0 1-2-2V6" />
+                            <path d="m22 15-3 3-3-3" />
+                            <path d="M11 6h6a2 2 0 0 1 2 2v10" />
+                        </svg>
+                        <h3>Lo stesso lavoro, a ogni documento</h3>
+                        <p>Ogni riga va riletta e corretta, e il giorno dopo si ricomincia con il DDT successivo.</p>
+                    </div>
+                    <div class="form-cell"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
+                            <path d="M12 9v4" />
+                            <path d="M12 17h.01" />
+                        </svg>
+                        <h3>Errori che partono con la merce</h3>
+                        <p>Un lotto ricopiato male si nota solo quando il documento è già arrivato a destinazione.</p>
+                    </div>
+                    <div class="form-cell"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 21a8 8 0 0 1 11.873-7" />
+                            <circle cx="10" cy="8" r="5" />
+                            <path d="m17 17 5 5" />
+                            <path d="m22 17-5 5" />
+                        </svg>
+                        <h3>Regole che conosce una sola persona</h3>
+                        <p>Quale articolo vuole la data e quale le ultime cifre del lotto spesso non è scritto da
+                            nessuna parte.</p>
+                    </div>
+                </div>
+                <p class="forms-foot">La regola la decidi una volta. Da lì in poi viene applicata sempre allo stesso
+                    modo.</p>
+            </div>
+        </section>
+
+        <section class="sec" id="come">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Come funziona</div>
+                    <h2>Tre passaggi. <em>L'originale non si muove.</em></h2>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-n">01</div>
+                        <h3>Imposta le regole</h3>
+                        <p>Per ogni codice articolo scegli la regola del lotto e l'etichetta UE. I nuovi articoli
+                            trovati nei documenti possono entrare in elenco da soli, da configurare.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">02</div>
+                        <h3>Controlla l'anteprima</h3>
+                        <p>Trascina il PDF nella finestra. Vedi riga per riga il lotto prima e dopo, con evidenziati gli
+                            articoli ancora senza regola.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">03</div>
+                        <h3>Genera il PDF</h3>
+                        <p>Un nuovo file con data e ora nel nome finisce nella cartella che hai scelto. Vengono
+                            riscritte solo le righe che cambiano.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec grey" id="regole">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Regole del lotto</div>
+                    <h2>Quattro regole, <em>una per articolo.</em></h2>
+                    <p>Negli esempi la data del documento è il 14/10/26.</p>
+                </div>
+                <div class="rules">
+                    <div class="rule">
+                        <div class="rule-k">D</div>
+                        <h3>Data del documento, compatta</h3>
+                        <p class="rule-ex"><span>Lotto:</span> 261014</p>
+                    </div>
+                    <div class="rule">
+                        <div class="rule-k">T</div>
+                        <h3>Data del documento, per esteso</h3>
+                        <p class="rule-ex"><span>Lotto:</span> 14/10/2026</p>
+                    </div>
+                    <div class="rule">
+                        <div class="rule-k">L</div>
+                        <h3>Ultimi 5 caratteri del lotto</h3>
+                        <p class="rule-ex"><span>.A260051734 diventa</span> 51734</p>
+                    </div>
+                    <div class="rule">
+                        <div class="rule-k">NP</div>
+                        <h3>Non applicata, per scelta</h3>
+                        <p class="rule-ex"><span>Il lotto resta</span> invariato</p>
+                    </div>
+                </div>
+                <p class="rules-note">La sigla ISO incolonnata viene tolta dagli articoli con una regola e, se imposti
+                    l'etichetta, sostituita da <code>UE</code> o <code>NUE</code>. <strong>Un articolo senza regola
+                        resta com'è e viene segnalato</strong>: nessun dato viene inventato.</p>
+            </div>
+        </section>
+
+        <section class="sec" id="dati">
+            <div class="wrap pov">
+                <div class="pov-text">
+                    <div class="eyebrow">I tuoi dati</div>
+                    <h2>Il PDF resta sul tuo computer. <em>Le regole possono arrivare dal gestionale.</em></h2>
+                    <p>Non ci sono account né servizi cloud. Se vuoi evitare di inserire i codici a mano, puoi collegare
+                        il database aziendale PostgreSQL e lasciare che siano le tue query a indicare le regole.</p>
+                    <ul class="check">
+                        <li>Il documento viene elaborato solo in locale</li>
+                        <li>Una regola scritta a mano vale sempre più di quella del database</li>
+                        <li>Più query in ordine di priorità: per ogni codice vince la prima valida</li>
+                        <li>La diagnostica mostra quali codici del documento ogni query ha trovato</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <div class="panel-bar"><span class="panel-name">Diagnostica query</span></div>
+                    <div class="diag">
+                        <div class="diag-row">
+                            <div><strong>Regole per categoria</strong><span class="diag-ok">trovati 9 / 14</span></div>
+                            <small>guida le regole</small>
+                        </div>
+                        <div class="diag-row">
+                            <div><strong>Provenienza UE</strong><span class="diag-ok">trovati 14 / 14</span></div>
+                            <small>guida le regole</small>
+                        </div>
+                        <div class="diag-row">
+                            <div><strong>Vecchia anagrafica</strong><span class="diag-ko">trovati 0 / 14</span></div>
+                            <small>I codici restituiti non coincidono con quelli del PDF</small>
+                        </div>
+                    </div>
+                    <div class="panel-foot"><span>Esempio</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec get" id="demo">
+            <div class="wrap get-grid">
+                <div class="sec-head">
+                    <div class="eyebrow">Demo</div>
+                    <h2>Guarda <em>come funziona.</em></h2>
+                    <p>Compila il modulo: ti ricontattiamo per organizzare una dimostrazione.</p>
+                </div>
+                <form class="form" id="demo-form" novalidate>
+                    <div class="row2">
+                        <div class="field"><label for="nome">Nome <b>*</b></label><input id="nome" name="nome"
+                                type="text" required autocomplete="given-name"></div>
+                        <div class="field"><label for="cognome">Cognome <b>*</b></label><input id="cognome"
+                                name="cognome" type="text" required autocomplete="family-name"></div>
+                    </div>
+                    <div class="field"><label for="azienda">Azienda <b>*</b></label><input id="azienda" name="azienda"
+                            type="text" required autocomplete="organization"></div>
+                    <div class="row2">
+                        <div class="field"><label for="email">Email <b>*</b></label><input id="email" name="email"
+                                type="email" required autocomplete="email" placeholder="nome@azienda.it"></div>
+                        <div class="field"><label for="telefono">Telefono</label><input id="telefono" name="telefono"
+                                type="tel" autocomplete="tel"></div>
+                    </div>
+                    <div class="field">
+                        <label for="messaggio">Messaggio</label>
+                        <textarea id="messaggio" name="messaggio" rows="4" maxlength="2000"
+                            placeholder="Facoltativo: raccontaci che DDT gestisci o di cosa hai bisogno."></textarea>
+                    </div>
+                    <p class="form-msg err" id="form-err" role="alert" hidden></p>
+                    <p class="form-msg ok" id="form-ok" role="status" hidden></p>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Richiedi una demo</button>
+                    <p class="note">Usiamo questi dati solo per ricontattarti sulla demo. Puoi chiederne la
+                        cancellazione scrivendo a info@esconsulting.it.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <div class="foot-grid">
+                <div>
+                    <h4>ESC Enterprise Software Consulting srl</h4><span>Via Torriani, 13, 24047 Treviglio
+                        (BG)</span><span>Tel. +39 0363 302050</span><span>info@esconsulting.it</span><span>P.Iva
+                        IT03031480167</span>
+                </div>
+                <div>
+                    <h4>Altri strumenti ESC</h4><a href="https://escsrl.github.io/esc-safedoc-releases/"
+                        rel="noopener">SafeDoc</a><a href="https://escsrl.github.io/prompt-book/"
+                        rel="noopener">PromptBook</a>
+                </div>
+                <div>
+                    <h4>ESC</h4><a href="https://esconsulting.it/" rel="noopener">esconsulting.it</a><a
+                        href="https://www.linkedin.com/company/esc-enterprise-software-consulting/"
+                        rel="noopener">LinkedIn</a><a href="https://github.com/escsrl" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="foot-copy"><span>© <span id="yr">2026</span> ESC Enterprise Software Consulting
+                    srl</span><span>Elaborazione esclusivamente locale</span></div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            document.getElementById("yr").textContent = new Date().getFullYear();
+            document.getElementById("theme-btn").addEventListener("click", function () {
+                var cur = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+                var next = cur === "light" ? "dark" : "light";
+                root.setAttribute("data-theme", next);
+                try { localStorage.setItem("esc-theme", next); } catch (e) { }
+            });
+
+            var sheet = document.getElementById("sheet");
+            var buttons = document.querySelectorAll(".switch button");
+            var timer = null;
+            function show(state) {
+                sheet.setAttribute("data-state", state);
+                buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.show === state)); });
+            }
+            buttons.forEach(function (b) {
+                b.addEventListener("click", function () { clearTimeout(timer); show(b.dataset.show); });
+            });
+
+            // Indirizzo della Web App di Google Apps Script collegata al foglio Google.
+            var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyW3hZdVA4EaKq42HPF96CYGCx50cuk8xmRmnrM9h2XvGOKazl88Sn4Y-XCHqS7uQWXiA/exec";
+            var form = document.getElementById("demo-form");
+            var submit = document.getElementById("submit-btn");
+            var err = document.getElementById("form-err");
+            var ok = document.getElementById("form-ok");
+            function fail(msg) {
+                err.textContent = msg;
+                err.hidden = false;
+                submit.disabled = false;
+                submit.textContent = "Richiedi una demo";
+            }
+            var INVIO_KO = "Invio non riuscito. Riprova o scrivi a info@esconsulting.it.";
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                if (submit.disabled) return;
+                err.hidden = true;
+                var valido = form.nome.value.trim() && form.cognome.value.trim() && form.azienda.value.trim()
+                    && form.email.value.trim() && form.email.checkValidity();
+                if (!valido) return fail("Compila nome, cognome, azienda e un indirizzo email valido.");
+                if (!SCRIPT_URL) return fail(INVIO_KO);
+                submit.disabled = true;
+                submit.textContent = "Invio in corso…";
+                var payload = {
+                    tipo: "demo",
+                    nome: form.nome.value.trim(),
+                    cognome: form.cognome.value.trim(),
+                    azienda: form.azienda.value.trim(),
+                    email: form.email.value.trim(),
+                    telefono: form.telefono.value.trim(),
+                    messaggio: form.messaggio.value.trim()
+                };
+                // Il body resta una stringa (text/plain): niente preflight CORS, che Apps Script non gestisce.
+                // Non aggiungere headers Content-Type: application/json.
+                fetch(SCRIPT_URL, { method: "POST", body: JSON.stringify(payload) })
+                    .then(function (res) {
+                        if (!res.ok) throw new Error(String(res.status));
+                        return res.json();
+                    })
+                    .then(function (data) {
+                        if (!data.ok) throw new Error(data.error || "errore");
+                        ok.textContent = "Richiesta inviata. Ti ricontatteremo all'indirizzo " + payload.email + ".";
+                        ok.hidden = false;
+                        submit.hidden = true;
+                        form.reset();
+                    })
+                    .catch(function () { fail(INVIO_KO); });
+            });
+
+            // Una sola volta al caricamento: il documento parte originale e si trasforma.
+            if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                show("in");
+                timer = setTimeout(function () { show("out"); }, 1600);
+            }
+        })();
+    </script>
+</body>
+
+</html>
