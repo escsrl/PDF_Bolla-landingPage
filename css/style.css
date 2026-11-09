@@ -897,6 +897,32 @@ header.top {
     }
 }
 
+.consent label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1.45;
+    cursor: pointer;
+}
+
+.consent input {
+    width: 18px;
+    height: 18px;
+    margin: 2px 0 0;
+    flex: none;
+    accent-color: var(--accent);
+}
+
+.consent a {
+    color: var(--accent-text);
+}
+
+.consent b {
+    color: var(--accent-text);
+    font-weight: 500;
+}
+
 .note {
     font-size: 13.5px;
     color: var(--grey-dim);

@@ -295,6 +295,12 @@
                         <textarea id="messaggio" name="messaggio" rows="4" maxlength="2000"
                             placeholder="Facoltativo: raccontaci che DDT gestisci o di cosa hai bisogno."></textarea>
                     </div>
+                    <div class="consent">
+                        <label><input type="checkbox" id="privacy" name="privacy" value="si" required> <span>Ho letto
+                                l'<a href="https://esconsulting.it/docs/privacy/Informativa_PotenzialiClienti.pdf"
+                                    target="_blank" rel="noopener">informativa sul trattamento dei dati</a> e
+                                acconsento al ricontatto per la demo. <b>*</b></span></label>
+                    </div>
                     <p class="form-msg err" id="form-err" role="alert" hidden></p>
                     <p class="form-msg ok" id="form-ok" role="status" hidden></p>
                     <button type="submit" class="btn btn-primary" id="submit-btn">Richiedi una demo</button>
@@ -321,7 +327,9 @@
                 <div>
                     <h4>ESC</h4><a href="https://esconsulting.it/" rel="noopener">esconsulting.it</a><a
                         href="https://www.linkedin.com/company/esc-enterprise-software-consulting/"
-                        rel="noopener">LinkedIn</a><a href="https://github.com/escsrl" rel="noopener">GitHub</a>
+                        rel="noopener">LinkedIn</a><a href="https://github.com/escsrl" rel="noopener">GitHub</a><a
+                        href="https://esconsulting.it/docs/privacy/Informativa_PotenzialiClienti.pdf" target="_blank"
+                        rel="noopener">Privacy</a>
                 </div>
             </div>
             <div class="foot-copy"><span>© <span id="yr">2026</span> ESC Enterprise Software Consulting
@@ -371,6 +379,7 @@
                 var valido = form.nome.value.trim() && form.cognome.value.trim() && form.azienda.value.trim()
                     && form.email.value.trim() && form.email.checkValidity();
                 if (!valido) return fail("Compila nome, cognome, azienda e un indirizzo email valido.");
+                if (!form.privacy.checked) return fail("Serve il consenso per poterti ricontattare.");
                 if (!SCRIPT_URL) return fail(INVIO_KO);
                 submit.disabled = true;
                 submit.textContent = "Invio in corso…";
@@ -381,7 +390,8 @@
                     azienda: form.azienda.value.trim(),
                     email: form.email.value.trim(),
                     telefono: form.telefono.value.trim(),
-                    messaggio: form.messaggio.value.trim()
+                    messaggio: form.messaggio.value.trim(),
+                    privacy: "si"
                 };
                 // Il body resta una stringa (text/plain): niente preflight CORS, che Apps Script non gestisce.
                 // Non aggiungere headers Content-Type: application/json.
