@@ -170,8 +170,7 @@ header.top {
     height: 68px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 24px;
 }
 
 .brand {
@@ -180,31 +179,22 @@ header.top {
     gap: 12px;
     text-decoration: none;
     color: var(--fg);
-    min-width: 0;
+    flex: none;
 }
 
 .brand svg {
-    width: 32px;
-    height: 33px;
+    width: 40px;
+    height: 40px;
     flex: none;
 }
 
 .brand-name {
     font-family: var(--mono);
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
-}
-
-.brand-by {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--grey-dim);
-    letter-spacing: 0.12em;
+    font-weight: 500;
+    font-size: 10.5px;
+    line-height: 1.25;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    border-left: 1px solid var(--line);
-    padding-left: 12px;
     white-space: nowrap;
 }
 
@@ -213,6 +203,16 @@ header.top {
     align-items: center;
     gap: 26px;
     font-size: 14px;
+    height: 38px;
+    padding-left: 24px;
+    border-left: 1px solid var(--line);
+}
+
+.nav-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .nav-links a {
@@ -242,6 +242,29 @@ header.top {
 .theme-btn:hover {
     color: var(--fg);
     border-color: var(--grey-dim);
+}
+
+/* icona del tema: sole nel tema scuro (per passare al chiaro), luna nel chiaro */
+.theme-btn .i-moon {
+    display: none;
+}
+
+:root[data-theme="light"] .theme-btn .i-sun {
+    display: none;
+}
+
+:root[data-theme="light"] .theme-btn .i-moon {
+    display: inline;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-btn .i-sun {
+        display: none;
+    }
+
+    :root:not([data-theme="dark"]) .theme-btn .i-moon {
+        display: inline;
+    }
 }
 
 /* buttons */
@@ -281,15 +304,16 @@ header.top {
     color: var(--accent-text);
 }
 
-.nav-links .btn {
+.nav-actions .btn {
+    font-family: var(--mono);
+    font-weight: 500;
     padding: 9px 18px;
-    font-size: 13.5px;
+    font-size: 13px;
 }
 
-.nav-links a.btn-primary,
-.nav-links a.btn-primary:hover {
+.nav-actions .btn-primary,
+.nav-actions .btn-primary:hover {
     color: var(--on-accent);
-    font-weight: 700;
 }
 
 /* hero */
@@ -997,8 +1021,7 @@ footer.foot {
         gap: 44px;
     }
 
-    .nav-links a:not(.btn),
-    .brand-by {
+    .nav-links {
         display: none;
     }
 }
@@ -1021,15 +1044,15 @@ footer.foot {
         padding-inline: 16px;
     }
 
-    .brand-name {
-        font-size: 14px;
-    }
-
-    .nav-links {
+    .nav {
         gap: 10px;
     }
 
-    .nav-links .btn {
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .nav-actions .btn {
         padding: 8px 12px;
         font-size: 13px;
     }
@@ -1065,7 +1088,7 @@ footer.foot {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 400px) {
     .brand-name {
         display: none;
     }
